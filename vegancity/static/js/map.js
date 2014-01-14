@@ -3,23 +3,7 @@
 /////////////////////////////////////
 
 var summaryCaptionTemplate = [
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    '<strong><a ID="captionBubble_hyperlink" class="uline" href="<%= url %>"><%= name %></a></strong><br/>',
-=======
-    '<strong><a id="captionBubble_hyperlink" href="<%= url %>"><%= name %></a></strong><br/>',
->>>>>>> dc14a08ca074c6e3a2cb6859bea1b33699882aae
-=======
-    '<strong><a id="captionBubble_hyperlink" href="<%= url %>"><%= name %></a></strong><br/>',
->>>>>>> dc14a08ca074c6e3a2cb6859bea1b33699882aae
-=======
-    '<strong><a id="captionBubble_hyperlink" href="<%= url %>"><%= name %></a></strong><br/>',
->>>>>>> dc14a08ca074c6e3a2cb6859bea1b33699882aae
-=======
-    '<strong><a id="captionBubble_hyperlink" href="<%= url %>"><%= name %></a></strong><br/>',
->>>>>>> dc14a08ca074c6e3a2cb6859bea1b33699882aae
+    '<strong><a class="uline" href="<%= url %>"><%= name %></a></strong><br/>',
     '<%= address %><br/>',
     '<%= phone %><br/>'].join(""),
     detailCaptionTemplate = '<strong><%= name %></strong><br/>',

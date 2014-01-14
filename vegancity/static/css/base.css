@@ -102,48 +102,6 @@ input#vc-search-input, input#search-input {
     background-image: linear-gradient(to bottom, #fbb450, #f89406);
 }
 
-a#captionBubble_hyperlink {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-     font-family: 'Source Sans Pro', sans-serif;
-     color: #2A3655;
-     font-size: 14px !important;
-     text-overflow:ellipsis;
- }
- 
- a#captionBubble_hyperlink:hover {
-     color: #d25d09 !important;
-     text-decoration: none !important;
- }
-=======
-=======
->>>>>>> dc14a08ca074c6e3a2cb6859bea1b33699882aae
-=======
->>>>>>> dc14a08ca074c6e3a2cb6859bea1b33699882aae
-=======
->>>>>>> dc14a08ca074c6e3a2cb6859bea1b33699882aae
-    font-family: 'Source Sans Pro', sans-serif;
-    color: #2A3655;
-    font-size: 14px !important;
-    text-overflow:ellipsis;
-}
-
-a#captionBubble_hyperlink:hover {
-    color: #d25d09 !important;
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> dc14a08ca074c6e3a2cb6859bea1b33699882aae
-=======
->>>>>>> dc14a08ca074c6e3a2cb6859bea1b33699882aae
-=======
->>>>>>> dc14a08ca074c6e3a2cb6859bea1b33699882aae
-=======
->>>>>>> dc14a08ca074c6e3a2cb6859bea1b33699882aae
-
 a.uline {
     text-decoration: underline;
 }
