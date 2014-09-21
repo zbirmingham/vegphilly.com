@@ -425,6 +425,7 @@ class Vendor(models.Model):
         if self.address:
             self.apply_geocoding()
         super(Vendor, self).save(*args, **kwargs)
+        email.send_new_vendor_alert(self)
 
     def save_existing(self, *args, **kwargs):
         previous_state = Vendor.objects.get(pk=self.pk)
