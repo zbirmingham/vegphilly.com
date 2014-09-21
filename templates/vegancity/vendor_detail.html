@@ -88,7 +88,7 @@
               <td>Cuisine(s): </td>
               <td class="vendor-detail-tags">
                 {% for tag in vendor.cuisine_tags.all %}
-                  <a href="/vendors/?cuisine={{ tag.id }}">{{ tag }}</a>
+                  <a href="/vendors/?cuisine={{ tag.id }}">{{ tag|spaces_to_nbsps }}</a>
                 {% endfor %}
               </td>
             </tr>
@@ -98,7 +98,7 @@
               <td>Features: </td>
               <td class="vendor-detail-tags">
                 {% for tag in vendor.feature_tags.all %}
-                  <a href="/vendors/?feature={{ tag.id }}">{{ tag }}</a>
+                  <a href="/vendors/?feature={{ tag.id }}">{{ tag|spaces_to_nbsps }}</a>
 
                 {% endfor %}
               </td>

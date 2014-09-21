@@ -5,6 +5,8 @@ from urllib import quote_plus
 
 from django import template
 from django.conf import settings
+from django.utils.html import escape
+from django.utils.safestring import mark_safe
 
 DEFAULT_USER_ICON = quote_plus(
     "http://%s/static/images/default_user_icon.jpg" % settings.HOSTNAME)
@@ -38,7 +40,12 @@ def graphical_rating(rating):
                      'images/rating-faded.png">') * (4 - rating)
     return rating_icons
 
+def spaces_to_nbsps(obj):
+    safe_string = escape(unicode(obj))
+    return mark_safe(safe_string.replace(" ", "&nbsp;"))
+
 register = template.Library()
+spaces_to_nbsps = register.filter(spaces_to_nbsps, is_safe=True)
 strip_http = register.filter(strip_http, is_safe=True)
 gravatar_urlify = register.filter(gravatar_urlify, is_safe=True)
 graphical_rating = register.filter(graphical_rating, is_safe=True)
