@@ -1,3 +1,4 @@
+/*global google *, $, _, Backbone */
 var SearchFormView = Backbone.View.extend({
     events: {
         "click #clear_all": function (event) {
@@ -12,6 +13,7 @@ var SearchFormView = Backbone.View.extend({
             var vendor_id = $("#id_vendors").val();
             google.maps.event.trigger(vendorMap.markers[vendor_id], 'click');
             $('html, body').animate({ scrollTop: 100 }, 'slow');
+            $('#map-area').show();
        },
         "change #id_neighborhood, #id_cuisine, #id_checked_features, #id_feature": function (event) {
             $('form#filters').submit();
@@ -45,14 +47,12 @@ var SearchFormView = Backbone.View.extend({
             $("#legend-table tbody").append(tableRow);
         });
 
-        $(".veg-level-0").attr("src", vegCategoryMarkerMapping['omni']);
-        $(".veg-level-7").attr("src", vegCategoryMarkerMapping['omni']);
-        $(".veg-level-6").attr("src", vegCategoryMarkerMapping['omni']);
-        $(".veg-level-5").attr("src", vegCategoryMarkerMapping['omni']);
-        $(".veg-level-4").attr("src", vegCategoryMarkerMapping['vegetarian']);
-        $(".veg-level-3").attr("src", vegCategoryMarkerMapping['vegetarian']);
-        $(".veg-level-2").attr("src", vegCategoryMarkerMapping['vegetarian']);
-        $(".veg-level-1").attr("src", vegCategoryMarkerMapping['vegan']);
+        _.each(_.range(0, 7), function (i) {
+            var category = vegLevelCategoryMapping[i],
+                imageUrl = vegCategoryMarkerMapping[i];
+            $(".veg-level-" + i).attr("src", imageUrl);
+        });
+
     },
 
     resetFilters: function () {
@@ -64,4 +64,23 @@ var SearchFormView = Backbone.View.extend({
 
 $(document).ready(function () {
     new SearchFormView({el: $('body') });
+
+    function syncSelect(srcSelector, destSelector) {
+        var itemName = $(srcSelector + ' :selected').text();
+        $(destSelector).text(itemName);
+    }
+
+    var syncNeighborhoodMask = _.partial(syncSelect, '#id_neighborhood', '#neighborhood_mask');
+    var syncCuisineMask = _.partial(syncSelect, '#id_cuisine', '#cuisine_mask');
+
+    $('#id_neighborhood').change(syncNeighborhoodMask);
+    $('#id_cuisine_tag').change(syncCuisineMask);
+    $(document)
+        .ready(syncNeighborhoodMask)
+        .ready(syncCuisineMask);
+
+    $('#map-show-controls').click(function () {
+        $('#map-area').hide();
+    });
+
 });

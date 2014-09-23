@@ -51,30 +51,6 @@ h5, h6 {
     padding-top: 26px;
 }
 
-div#vc-search-borderbox {
-    margin-top:21px;
-    margin-left:8px;
-    margin-right:8px;
-    margin-bottom: 21px;
-    background-color: rgb(199, 224, 227);
-    width: 100%;
-}
-
-div#vc-searchbox {
-    width: 100%;
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-.hero-unit {
-    background: url(/static/images/hero_unit.jpg);
-}
-
-.hero-unit h1 {
-    font-size: 55px;
-}
-
 
 input#vc-search-input, input#search-input {
     box-shadow: #888888;
@@ -132,26 +108,10 @@ div#vendor_table {
     font-size: 14px;
 }
 
-.hero {
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
 .btn:hover,
 .btn:focus {
   opacity: 0.8;
   background-position: 0 0px;
-}
-
-.bios h5 {
-  padding-top: 12px;
-  padding-bottom: 3px;
-}
-
-.bios .bio {
-  padding-left: 35px;
-  padding-right: 35px;
-  text-align: left;
 }
 
 #vegphilly-icons {
@@ -164,4 +124,14 @@ div#vendor_table {
   max-height: 100px;
   margin-left: 3%;
   margin-right: 3%;
+}
+
+@media (max-width: 787px) {
+  body {
+    padding: 0;
+  }
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }

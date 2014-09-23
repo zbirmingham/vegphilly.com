@@ -1,25 +1,46 @@
 #control-area {
     width: 100%;
-    top: 431px;
-    bottom: 0;
+    top: 81px;
     left: 0;
     right: 0;
     position: absolute;
     text-align: center;
     background-color: #fff;
-    overflow: none;
+    overflow: auto;
+    z-index: -2;
 }
 
 #map-area {
     top: 81px;
     left: 0;
     right: 0;
-    height: 350px;
     overflow: none;
     position: absolute;
     z-index: -1;
 }
 
+
 #legend-table {
     display: none;
+}
+
+button#map-show-controls {
+  position: absolute;
+  display: block;
+  right:10px;
+  bottom: 25px;
+  z-index: 10;
+  height: 50px;
+  width: 100px;
+  border: 1px solid #444;
+  padding: 0px;
+}
+
+#search-input {
+    height: 35px;
+    width: 180px;
+}
+
+#clear_all {
+  width: 177px;
 }

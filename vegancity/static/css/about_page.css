@@ -27,6 +27,18 @@
   color: #f6c084;
   font-weight: 400;
   font-size: 200%;
+  text-align: right;
+}
+
+.badge-container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.be-well-badge {
+  max-width: 400px;
 }
 
 a:hover
@@ -60,8 +72,87 @@ i
 
 .about-hero
 {
-  height: 400px;
+  height: 420px;
   background-size: cover;
   text-align: right;
   padding-top: 30px;
+}
+
+.bios {
+  margin-bottom: 50px;
+}
+
+.bios h5 {
+  padding-top: 12px;
+  padding-bottom: 3px;
+  margin-bottom: 0;
+}
+
+.bios .bio {
+  padding-left: 35px;
+  padding-right: 35px;
+  text-align: left;
+}
+
+h6 {
+  margin: 5px;
+}
+
+.contributors {
+  text-align: left;
+  margin-left: 6%;
+}
+.contributors h5 {
+  margin: 0;
+  padding-top: 5px;
+}
+
+
+
+@media (max-width: 787px) {
+  .about-hero {
+    height: 180px;
+    margin-top: 30px;
+    position: relative;
+  }
+  .about-hero h3 {
+    position: absolute;
+    left: 0;
+    top: -70px;
+    max-width: 100%;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+  }
+  .about-hero h2 {
+    position: absolute;
+    top: -10px;
+    max-width: 100;
+    font-size: 20px;
+    line-height: 24px;
+    width: 100%;
+    text-align: center;
+  }
+  .bios {
+    margin-bottom: 0px;
+  }
+  .bios .bio {
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: left;
+  }
+  .team-member {
+    margin-bottom: 60px;
+  }
+  .contributor {
+    margin-bottom: 20px;
+  }
+  .badge-container {
+    text-align: center;
+    border-top: 1px solid #B6B6B6;
+  }
+  .be-well-badge {
+    max-width: 240px;
+    margin-top: 40px;
+  }
 }
